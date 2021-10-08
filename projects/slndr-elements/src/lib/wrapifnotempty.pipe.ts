@@ -16,23 +16,23 @@ import { isEmpty, isNumber } from 'lodash-es';
  ```
  */
 @Pipe({
-  name: 'wrapIfNotEmpty'
+    name: 'wrapIfNotEmpty'
 })
 @Injectable()
 export class WrapIfNotEmptyPipe implements PipeTransform {
-  transform(value: any, preFix: string, postFix: string = null, emptyAlso: boolean = true): string {
-    if (value == null) {
-      return '';
+    transform(value: any, preFix: string, postFix: string = null, emptyAlso: boolean = true): string {
+        if (value == null) {
+            return '';
+        }
+        if (emptyAlso && !isNumber(value) && isEmpty(value)) {
+            return '';
+        }
+        if (preFix != null && postFix != null) {
+            return `${preFix}${value}${postFix}`;
+        }
+        if (preFix != null) {
+            return `${preFix}${value}`;
+        }
+        return `${value}${postFix}`;
     }
-    if (emptyAlso && !isNumber(value) && isEmpty(value)) {
-      return '';
-    }
-    if (preFix != null && postFix != null) {
-      return `${preFix}${value}${postFix}`;
-    }
-    if (preFix != null) {
-      return `${preFix}${value}`;
-    }
-    return `${value}${postFix}`;
-  }
 }

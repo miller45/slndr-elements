@@ -1,6 +1,8 @@
 {
   "extends": "../../tslint.json",
   "rules": {
+    "no-inferrable-types": false,
+    "no-string-literal": false,
     "jsdoc-format": false,
     "directive-selector": [
       true,

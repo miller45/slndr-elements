@@ -1,4 +1,3 @@
-
 import { IfnilPipe } from './ifnil.pipe';
 
 describe('lib', () => {
