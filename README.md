@@ -62,4 +62,33 @@ If also an empty value should be wrapped, add a last parameter with `false`. The
  ```
  Above would should e.g. [yourtext] if not null and *nothing* if null 
  
+### disableControl directive 
+
+This directive can be used to add the functionality to disabling form controls when working with reactive forms in angular.
+
+With the default [disable] tag, you get the message: 
+It looks like you’re using the disabled attribute with a reactive form directive.
+
+If you set disabled to true in the control in your component class,
+the disabled attribute will actually be set in the DOM for you.
+We recommend using this approach to avoid ‘changed after checked’ errors.
+
+This can be used if you don't want to disable/enable the control
+in code like formControl.disable() or formControl.enable() or new FormControl({value: '', disabled: true})
+
+#### Usage
+```html
+<input matInput formControlName="coolName" [disableControl]="isDisabled">
+```
+
+### disableComponent directive
+
+This is the same as disableControl directive but this does not work with material controls (TODO: talk to developer if that was the real reason)
+
+#### Usage
+```html
+<input matInput formControlName="coolName" [disableComponent]="isDisabled">
+```
+
+
 
