@@ -20,7 +20,7 @@ Besides, the default angular dependencies this module requires following package
 - [lodash-es](https://www.npmjs.com/package/lodash-es)
 ## markdownLink pipe
 
-Converts a markdown link e.g. [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+Converts a markdown link e.g. `[I'm an inline-style link with title](https://www.google.com "Google's Homepage")`
 into real a href link. It can be used to "allow" links in plain text input elements like html textareas.
 
 ## Usage
