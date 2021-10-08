@@ -26,7 +26,7 @@ export class MockDomSanitationService {
   }
 }
 
-describe('ROLIB - UI', () => {
+describe('lib', () => {
 
   let domSanitizer: DomSanitizer;
 

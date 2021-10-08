@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 
 import { MarkdownLinkPipe } from './markdownlink.pipe';
+import { IfnilPipe } from './ifnil.pipe';
+import { WrapIfNotEmptyPipe } from './wrapifnotempty.pipe';
 
 @NgModule({
-  declarations: [MarkdownLinkPipe],
-  imports: [
-  ],
-  exports: [MarkdownLinkPipe]
+  declarations: [ MarkdownLinkPipe, IfnilPipe, WrapIfNotEmptyPipe ],
+  imports: [],
+  exports: [ MarkdownLinkPipe, IfnilPipe, WrapIfNotEmptyPipe ]
 })
-export class SlndrElementsModule { }
+export class SlndrElementsModule {
+}
