@@ -18,7 +18,7 @@ import * as _ from 'lodash';
     name: 'ifNil'
 })
 @Injectable()
-export class IfNilPipe implements PipeTransform {
+export class IfnilPipe implements PipeTransform {
     transform(value: any, nilText: string, emptyAlso: boolean = false): any {
         if (_.isNil(value)) {
             return nilText;
