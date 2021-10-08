@@ -6,4 +6,5 @@ export * from './lib/ifnil.pipe';
 export * from './lib/wrapifnotempty.pipe';
 export * from './lib/disable-control.directive';
 export * from './lib/disable-component.directive';
+export * from './lib/browser-location.service';
 export * from './lib/slndr-elements.module';

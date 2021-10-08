@@ -1,6 +1,6 @@
 # slndr-elements
 
-A small collection of minimal/slender angular pipes and directives
+A small collection of minimalistic/slender angular pipes, directives and services
 
 ## Installation
 
@@ -19,7 +19,7 @@ Besides, the default angular dependencies this module requires following package
 
 - [lodash-es](https://www.npmjs.com/package/lodash-es)
 
-## pipes and directives
+## Pipes and Directives
 
 ### markdownLink pipe
 
@@ -90,5 +90,9 @@ This is the same as disableControl directive but this does not work with materia
 <input matInput formControlName="coolName" [disableComponent]="isDisabled">
 ```
 
+## Services
 
+### BrowserLocationService
 
+A service to access the browsers window.location object. It is very handy if you want to write unit tests.
+The interface is like https://developer.mozilla.org/en-US/docs/Web/API/Location
