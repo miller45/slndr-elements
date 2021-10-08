@@ -1,7 +1,7 @@
 
 import { IfnilPipe } from './ifnil.pipe';
 
-describe('ROLIB - UI', () => {
+describe('lib', () => {
 
     describe('IfNilPipe', () => {
 

@@ -1,6 +1,6 @@
 
 import { Injectable, Pipe, PipeTransform } from '@angular/core';
-import * as _ from 'lodash';
+import { isEmpty } from 'lodash-es';
 
 /**
  * If the value is null/undefined just display an alternative text
@@ -20,10 +20,10 @@ import * as _ from 'lodash';
 @Injectable()
 export class IfnilPipe implements PipeTransform {
     transform(value: any, nilText: string, emptyAlso: boolean = false): any {
-        if (_.isNil(value)) {
+        if (value == null) {
             return nilText;
         }
-        if (emptyAlso && _.isEmpty(value)) {
+        if (emptyAlso && isEmpty(value)) {
             return nilText;
         }
         return value;
